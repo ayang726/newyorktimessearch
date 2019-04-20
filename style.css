@@ -1,0 +1,16 @@
+.jumbotron {
+    background: rgb(2, 2, 107);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+p {
+    background: rgb(2, 2, 107);
+    color: white;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
