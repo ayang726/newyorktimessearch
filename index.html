@@ -30,26 +30,25 @@
                 <form>
                     <div class="form-group">
                         <label>Search Term: </label>
-                        <input type="search" class="form-control" placeholder="Search">
+                        <input id="searchTerm" type="search" class="form-control" placeholder="Search">
                     </div>
                     <div class="form-group">
                         <label>Number of Records to Retrieve: </label>
-                        <input type="search" class="form-control" placeholder="Search">
+                        <input id="numberRecords" type="search" class="form-control" placeholder="Search">
                     </div>
                     <div class="form-group">
                         <label>Start Year (Optional): </label>
-                        <input type="search" class="form-control" placeholder="Search">
+                        <input id="startYear" type="search" class="form-control" placeholder="Search">
                     </div>
                     <div class="form-group">
                         <label>End Year (Optional): </label>
-                        <input type="search" class="form-control" placeholder="Search">
+                        <input id="endYear" type="search" class="form-control" placeholder="Search">
                     </div>
                     <button type="submit" id="search" class="btn btn-primary"><i
                             class="fas fa-search"></i>Search</button>
                     <button type="submit" id="clear" class="btn btn-primary"><i class="fas fa-trash-alt"></i>Clear
                         Results</button>
                 </form>
-
             </div>
         </div>
     </div>
@@ -57,25 +56,28 @@
         <div class="row">
             <div class="col-md-12">
                 <p>Top Articles</p>
-
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     <script>
-
         $("#search").on("click", function () {
+            var searchTerm = $("#searchTerm").val();
+            var numberRecords = $("#numberRecords").val();
+            var startYear = $("#startYear").val();
+            var endYear = $("#endYear").val();
 
+            if (searchTerm !== "" && numberRecords !== "") {
+                // ajax request
 
-
-
+                updateUI();
+            }
         })
 
-    </script>
 
+        function updateUI();
+    </script>
 </body>
 
 </html>
