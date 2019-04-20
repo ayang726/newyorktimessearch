@@ -11,4 +11,4 @@ function getData() {
         console.log(response);
     })
 }
-getData();
+$(".search-content").submit(loadData);
