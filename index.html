@@ -57,31 +57,19 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="articles">
         <div class="row">
             <div class="col-md-12">
                 <p>Top Articles</p>
+                <ul id="articleList">
+
+                </ul>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
-        $("#search").on("click", function () {
-            var searchTerm = $("#searchTerm").val();
-            var numberRecords = $("#numberRecords").val();
-            var startYear = $("#startYear").val();
-            var endYear = $("#endYear").val();
-
-            if (searchTerm !== "" && numberRecords !== "") {
-                // ajax request
-
-                updateUI();
-            }
-        })
-
-
-        function updateUI();
     </script>
 </body>
 
